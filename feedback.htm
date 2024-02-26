@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function validateForm() {
+          let x = document.forms["myForm"]["name"].value;
+          let y = document.forms["myForm"]["address"].value;
+          let z = document.forms["myForm"]["phone"].value;
+          let w = document.forms["myForm"]["email"].value;
+          let v = document.getElementById("mytextarea").value;
+          if (x == "") {
+            alert("Name must be filled out");
+            return false;
+          }
+          else if (y == "") {
+            alert("Address must be filled out");
+            return false;
+          }
+          else if (z == "") {
+            alert("Phone must be filled out");
+            return false;
+          }
+          else if (w == "") {
+            alert("Email must be filled out");
+            return false;
+          }
+          else if (v == "") {
+            alert("Comments must be filled out");
+            return false;
+          }
+          else {
+            alert("Your form is successfully submitted. Thank you!");
+            return true;
+          }
+        }
+    </script>
+    <meta charset="UTF-8" />
+    <title>Jaci South - Feedback</title>
+    <link rel="icon" type="png" href="rose2.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <header>
+        <h1>Who is Jaci South?</h1>
+        <nav class="topnav">
+            <a class="topnavitems" href="index.htm">Home</a>
+            <a class="topnavitems" href="projects.htm">Projects</a>
+            <a class="topnavitems" href="resume.htm">Resume</a>
+            <a class="topnavitems" href="schedule.htm">Schedule</a>
+            <a class="topnavitems" href="feedback.htm">Feedback</a>
+        </nav>
+    </header>
+        <p class="forminstruction">Let us know what you think!</p>
+        <form name="myForm" action="tictactoe.htm" onsubmit="return validateForm()" method="post">
+            <label for="name">Full name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="address">Address:</label><br>
+            <input type="text" id="address" name="address"><br>
+            <label for="phone">Phone:</label><br>
+            <input type="text" id="phone" name="phone"><br>
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email"><br>
+            <label for="comments">Comments:</label><br>
+            <textarea id="mytextarea" name="mytextarea" rows="4" cols="50" required> 
+            </textarea><br>
+            <button type="submit"> 
+                Submit 
+            </button>
+          </form>
+    </div>
+    <footer>
+        <blockquote>“Sometimes it is the people no one can imagine anything of who do the things no one can imagine.”
+            ― Alan Turing</blockquote>
+        <p>Designed and coded by Jaci South</p>
+    </footer>
+</body>
+</html>
